@@ -7,3 +7,4 @@ def solution(numbers):
             if num > answer:
                 answer = num
     return answer
+#정렬해서 곱하기........... ㅠ
