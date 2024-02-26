@@ -4,3 +4,4 @@ def solution(array, n):
         if n == i:
             answer+=1
     return answer
+# answer = array.count(n)   참내....
