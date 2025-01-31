@@ -1,17 +1,15 @@
-import sys
-input = sys.stdin.readline
-a, b = list(map(int,input().split()))
-a1, b1 = list(map(int,input().split()))
-def gcd(a,b):
+분자, 분모 = map(int, input().split())
+분자2, 분모2 = map(int, input().split())
+
+def gcd(a, b):
     while b:
-        a, b = b,  a % b
+        a, b = b, a%b
     return a
 
-num = a*b1+b*a1
-denom = b*b1
+a1 = (분자*분모2)+(분자2*분모)
+a2 = 분모*분모2
+gcd = gcd(a1, a2)
+a1 = int(a1/gcd)
+a2 = int(a2/gcd)
 
-gcd = gcd(num,denom)
-num = int(num/gcd)
-denom = int(denom/gcd)
-print(num, denom)
-
+print(a1, a2)
